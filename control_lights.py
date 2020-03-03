@@ -14,12 +14,14 @@ import sys
 import SI1132
 import odroid_wiringpi as wpi
 
-from odroid_n2_gpio import ODROID_N2_PIN_MAP
+from odroid_n2_gpio import load_pin_map
 
 # https://wiki.odroid.com/odroid-n2/application_note/software/weather_board#wiring
 I2C_DEVICE_FILE = "/dev/i2c-2"
 
 LIGHTS_ON_LUX_THRESHOLD = 800
+
+ODROID_N2_PIN_MAP = load_pin_map()
 
 
 def lights_are_actually_on(threshold_lux=LIGHTS_ON_LUX_THRESHOLD):
