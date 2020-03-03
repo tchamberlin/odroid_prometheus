@@ -1,3 +1,4 @@
+import math
 import os
 import sys
 import time
@@ -8,6 +9,17 @@ import SI1132
 import BME280
 
 I2C_DEVICE_FILE = "/dev/i2c-2"
+
+# Adapted from: https://www.omnicalculator.com/physics/dew-point#howto
+# TODO: Find better source
+def get_dew_point(temperature, humidity):
+    a = 17.62
+    b = 243.12
+
+    α = ((a * temperature) / (b + temperature)) + math.log(humidity / 100)
+    dew_point = (b * α) / (a - α)
+
+    return dew_point
 
 
 def get_altitude(pressure, seaLevel):
@@ -36,6 +48,9 @@ def main():
     atmosphere_humidity_relative_gauge = prom.Gauge(
         "atmosphere_humidity_relative", "Humidity (%)"
     )
+    atmosphere_dew_point_gauge = prom.Gauge(
+        "atmosphere_dew_point", "Dew Point (C)"
+    )
 
     prom.start_http_server(9191)
     print("Start server on localhost:9191")
@@ -63,8 +78,13 @@ def main():
         atmosphere_humidity_relative = bme280.read_humidity()
         atmosphere_humidity_relative_gauge.set(atmosphere_humidity_relative)
 
+        atmosphere_dew_point = get_dew_point(
+            atmosphere_temperature_celcius, atmosphere_humidity_relative
+        )
+        atmosphere_dew_point_gauge.set(atmosphere_dew_point)
+
         if verbose:
-            os.system('clear')
+            os.system("clear")
             print(f"{light_uv_index=}")
             print(f"{light_visible_lux=}")
             print(f"{light_ir_lux=}")
@@ -72,6 +92,7 @@ def main():
             print(f"{atmosphere_pressure_hpa=}")
             print(f"{atmosphere_altitude_meters=}")
             print(f"{atmosphere_humidity_relative=}")
+            print(f"{atmosphere_dew_point=}")
 
         time.sleep(1)
 
