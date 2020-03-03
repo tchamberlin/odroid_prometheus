@@ -1,0 +1,282 @@
+---
+# Composed from: https://wiki.odroid.com/odroid-n2/hardware/expansion_connectors
+1:
+  io: null
+  long_name: 3.3V Power
+  mode: null
+  name: 3.3V
+  v: null
+  wpi_num: null
+2:
+  io: null
+  long_name: 5.0V Power
+  mode: null
+  name: 5V
+  v: null
+  wpi_num: null
+3:
+  io: 493
+  long_name: I2C_EE_M2_SDA/GPIOX_17(#)
+  mode: ALT1
+  name: SDA.2
+  v: 1
+  wpi_num: 8
+4:
+  io: null
+  long_name: 5.0V Power
+  mode: null
+  name: 5V
+  v: null
+  wpi_num: null
+5:
+  io: 494
+  long_name: I2C_EE_M2_SCL/GPIOX_18(#)
+  mode: ALT1
+  name: SCL.2
+  v: 1
+  wpi_num: 9
+6:
+  io: null
+  long_name: Ground
+  mode: null
+  name: 0V
+  v: null
+  wpi_num: null
+7:
+  io: 473
+  long_name: SPDIF_OUT/GPIOA_13(#)
+  mode: ALT1
+  name: IO.473
+  v: 1
+  wpi_num: 7
+8:
+  io: 488
+  long_name: GPIOX_12(#)/UART_EE_A_TX
+  mode: IN
+  name: TxD1
+  v: 1
+  wpi_num: 15
+9:
+  io: null
+  long_name: Ground
+  mode: null
+  name: 0V
+  v: null
+  wpi_num: null
+10:
+  io: 489
+  long_name: GPIOX_13(#)/UART_EE_A_RX
+  mode: IN
+  name: RxD1
+  v: 1
+  wpi_num: 16
+11:
+  io: 479
+  long_name: PWM_D/GPIOX_3(#)
+  mode: OUT
+  name: IO.479
+  v: 1
+  wpi_num: 0
+12:
+  io: 492
+  long_name: GPIOX_16(#)/PWM_E
+  mode: IN
+  name: IO.492
+  v: 1
+  wpi_num: 1
+13:
+  io: 480
+  long_name: GPIO_4(#)
+  mode: IN
+  name: IO.480
+  v: 1
+  wpi_num: 2
+14:
+  io: null
+  long_name: Ground
+  mode: null
+  name: 0V
+  v: null
+  wpi_num: null
+15:
+  io: 483
+  long_name: PWM_B/PWM_F/GPIOX_7(#)
+  mode: IN
+  name: IO.483
+  v: 1
+  wpi_num: 3
+16:
+  io: 476
+  long_name: GPIOX_0(#)
+  mode: IN
+  name: IO.476
+  v: 1
+  wpi_num: 4
+17:
+  io: null
+  long_name: 3.3V Power
+  mode: null
+  name: 3.3V
+  v: null
+  wpi_num: null
+18:
+  io: 477
+  long_name: GPIOX_1(#)
+  mode: IN
+  name: IO.477
+  v: 1
+  wpi_num: 5
+19:
+  io: 484
+  long_name: SPI_A_MOSI/GPIOX_8(#)
+  mode: IN
+  name: MOSI
+  v: 1
+  wpi_num: 12
+20:
+  io: null
+  long_name: Ground
+  mode: null
+  name: 0V
+  v: null
+  wpi_num: null
+21:
+  io: 485
+  long_name: SPI_A_MOSO/GPIOX_9(#)
+  mode: IN
+  name: MISO
+  v: 1
+  wpi_num: 13
+22:
+  io: 478
+  long_name: GPIOX_2(#)
+  mode: IN
+  name: IO.478
+  v: 1
+  wpi_num: 6
+23:
+  io: 487
+  long_name: SPI_A_SCLK/GPIOX_11(#)
+  mode: IN
+  name: SCLK
+  v: 1
+  wpi_num: 14
+24:
+  io: 486
+  long_name: GPIOX_10(#)/SPI_A_SSO
+  mode: IN
+  name: CE0
+  v: 1
+  wpi_num: 10
+25:
+  io: null
+  long_name: Ground
+  mode: null
+  name: 0V
+  v: null
+  wpi_num: null
+26:
+  io: 464
+  long_name: GPIOX_4(#)
+  mode: IN
+  name: IO.464
+  v: 0
+  wpi_num: 11
+27:
+  io: 474
+  long_name: I2C_EE_M3_SDA/GPIOA_14(#)
+  mode: ALT2
+  name: SDA.3
+  v: 1
+  wpi_num: 30
+28:
+  io: 475
+  long_name: GPIOX_15(#)/I2C_EE_M3_SCL
+  mode: ALT2
+  name: SCL.3
+  v: 1
+  wpi_num: 31
+29:
+  io: 490
+  long_name: UART_EE_A_CTS/GPIOX_14(#)
+  mode: IN
+  name: IO.490
+  v: 1
+  wpi_num: 21
+30:
+  io: null
+  long_name: Ground
+  mode: null
+  name: 0V
+  v: null
+  wpi_num: null
+31:
+  io: 491
+  long_name: UART_EE_A_RTS/GPIOX_15(#)
+  mode: IN
+  name: IO.491
+  v: 1
+  wpi_num: 22
+32:
+  io: 472
+  long_name: GPIOA_12(#)
+  mode: IN
+  name: IO.472
+  v: 0
+  wpi_num: 26
+33:
+  io: 481
+  long_name: PWM_C/GPIOX_5(#)
+  mode: IN
+  name: IO.481
+  v: 1
+  wpi_num: 23
+34:
+  io: null
+  long_name: Ground
+  mode: null
+  name: 0V
+  v: null
+  wpi_num: null
+35:
+  io: 482
+  long_name: PWM_D/GPIOX_6(#)
+  mode: IN
+  name: IO.482
+  v: 0
+  wpi_num: 24
+36:
+  io: 495
+  long_name: PWM_8/GPIOX_19(#)
+  mode: OUT
+  name: IO.495
+  v: 1
+  wpi_num: 27
+37:
+  io: null
+  long_name: ADC.AIN3
+  mode: null
+  name: AIN.3
+  v: null
+  wpi_num: 25
+38:
+  io: null
+  long_name: VDDIO_AO1V8
+  mode: null
+  name: 1V8
+  v: null
+  wpi_num: 28
+39:
+  io: null
+  long_name: Ground
+  mode: null
+  name: 0V
+  v: null
+  wpi_num: null
+40:
+  io: null
+  long_name: ADC.AIN2
+  mode: null
+  name: AIN.2
+  v: null
+  wpi_num: 29

@@ -1,3 +1,5 @@
+"""Prometheus Exporter for ODROID-controlled devices"""
+
 import prometheus_client as prom
 import time
 
@@ -6,8 +8,9 @@ from odroid_n2_gpio import read_pin
 
 
 def main():
+    # TODO: Grafana doesn't handle Enum; change to an int
     lights = prom.Enum(
-        "lights_state", "State of plant room lights (commanded)", states=["on", "off"],
+        "lights_state", "State of plant room lights (commanded)", states=["on", "off"]
     )
 
     prom.start_http_server(9192)
